@@ -6,7 +6,7 @@ import CtaBtn from "./CtaBtn.vue";
 <template>
   <!-- TITLE -->
   <div class="hdrTitle">
-    <HeaderTitle>HEADER TITLE</HeaderTitle>
+    <HeaderTitle>Where Style Meets Tradition</HeaderTitle>
     <section class="ctaSection">
       <ul>
         <li>
@@ -22,11 +22,9 @@ import CtaBtn from "./CtaBtn.vue";
   <!-- IMG / VIDEO -->
   <div class="bgMedia">
     <!-- Background media goes here -->
-    <video autoplay loop muted>
-      <!-- Put your video source here -->
-      <source src="/src/assets/video/bg-video.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <div>
+      <img src="https://res.cloudinary.com/planity/image/upload/c_crop,w_2048,h_1219,x_0,y_0/q_auto,f_auto/jupjkgzwa8vmqlunuxon" alt="Barber Shop Background">
+    </div>
   </div>
 </template>
 
@@ -35,7 +33,7 @@ import CtaBtn from "./CtaBtn.vue";
   position: absolute;
   top: 0;
   left: 0;
-  color: var(--black-color);
+  color: var(--white-color);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -44,6 +42,7 @@ import CtaBtn from "./CtaBtn.vue";
   height: 100%;
   font-size: 3rem;
   z-index: 1;
+  /* background: var(--black-color); */
 }
 
 .ctaSection ul {
