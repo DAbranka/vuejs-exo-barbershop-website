@@ -14,9 +14,9 @@ import NavBar from "./components/NavBar.vue";
 
   <!-- MAIN CONTENT -->
   <main>
-    <SectionComp id="section1">SECTION 1</SectionComp>
-    <SectionComp id="section2">SECTION 2</SectionComp>
-    <SectionComp id="section3">SECTION 3</SectionComp>
+    <SectionComp class="sections" id="section1">SECTION 1</SectionComp>
+    <SectionComp class="sections" id="section2">SECTION 2</SectionComp>
+    <SectionComp class="sections" id="section3">SECTION 3</SectionComp>
   </main>
 
   <!-- FOOTER -->
@@ -54,7 +54,12 @@ header {
   position: relative;
   height: 100%;
 }
-
+.sections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
 #section1 {
   background-color: #ffdddd;
   height: 100vh;

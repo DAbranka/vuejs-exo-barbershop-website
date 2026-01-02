@@ -23,7 +23,10 @@ import CtaBtn from "./CtaBtn.vue";
   <div class="bgMedia">
     <!-- Background media goes here -->
     <div>
-      <img src="https://res.cloudinary.com/planity/image/upload/c_crop,w_2048,h_1219,x_0,y_0/q_auto,f_auto/jupjkgzwa8vmqlunuxon" alt="Barber Shop Background">
+      <img
+        src="https://res.cloudinary.com/planity/image/upload/c_crop,w_2048,h_1219,x_0,y_0/q_auto,f_auto/jupjkgzwa8vmqlunuxon"
+        alt="Barber Shop Background"
+      />
     </div>
   </div>
 </template>
@@ -42,7 +45,7 @@ import CtaBtn from "./CtaBtn.vue";
   height: 100%;
   font-size: 3rem;
   z-index: 1;
-  /* background: var(--black-color); */
+  overflow: hidden;
 }
 
 .ctaSection ul {
@@ -61,10 +64,12 @@ import CtaBtn from "./CtaBtn.vue";
   height: 100%;
   overflow: hidden;
   z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bgMedia img {
-  width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(0.7);
