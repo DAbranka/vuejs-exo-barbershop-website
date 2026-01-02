@@ -63,9 +63,10 @@ import CtaBtn from "./CtaBtn.vue";
   z-index: -1;
 }
 
-.bgMedia video {
+.bgMedia img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(0.7);
 }
 </style>
