@@ -10,7 +10,7 @@ import CtaBtn from "./CtaBtn.vue";
     <section class="ctaSection">
       <ul>
         <li>
-          <CtaBtn :style="{backgroundColor: 'var(--accent)'}">Get Started</CtaBtn>
+          <CtaBtn :style="{backgroundColor: 'hsl(from var(--accent) h s l / 1)'}">Get Started</CtaBtn>
         </li>
         <li>
           <CtaBtn>Learn More</CtaBtn>
