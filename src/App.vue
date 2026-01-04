@@ -1,15 +1,15 @@
 <script setup>
-import TitleBg from "./components/TitleBg.vue";
 import SectionComp from "./components/SectionComp.vue";
 import FooterComp from "./components/FooterComp.vue";
 import NavBar from "./components/NavBar.vue";
+import HeaderContent from "./components/HeaderContent.vue";
 </script>
 
 <template>
   <!-- HEADER -->
   <header id="hero">
     <NavBar />
-    <TitleBg />
+    <HeaderContent />
   </header>
 
   <!-- MAIN CONTENT -->

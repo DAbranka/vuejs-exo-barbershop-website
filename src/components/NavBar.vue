@@ -15,9 +15,9 @@ const setActiveLink = (href) => {
     <div class="nav-bar--content">
       <!-- LOGO -->
       <div class="nav-bar-logo--container">
-        <div>
+        <!-- <div>
           <img src="" alt="logo/png" />
-        </div>
+        </div> -->
         <div class="logo-title">
           <p>The Gentlemen's Cut</p>
         </div>
@@ -61,7 +61,7 @@ const setActiveLink = (href) => {
 
       <!-- BOOKING BUTTON -->
       <div class="nav-bar-cta--container">
-        <CtaBtn :style="{backgroundColor: 'hsl(from var(--accent) h s l / 1)'}"
+        <CtaBtn :style="{backgroundColor: 'hsl(from var(--accent) h s l / 1)', fontWeight: 'bold'}"
           >Book Now</CtaBtn
         >
       </div>
@@ -116,7 +116,7 @@ const setActiveLink = (href) => {
 
 a {
   text-decoration: none;
-  color: hsl(from var(--white-color) h s 35 / 1);
+  color: hsl(from var(--white-color) h s 50 / 1);
   font-weight: 400;
   cursor: pointer;
   transition: color 0.3s ease;
