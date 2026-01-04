@@ -1,5 +1,6 @@
 <script setup>
 import {ref} from "vue";
+import CtaBtn from "./CtaBtn.vue";
 
 const activeLink = ref("#hero");
 
@@ -11,40 +12,60 @@ const setActiveLink = (href) => {
 /* -------------------------------- TEMPLATE -------------------------------- */
 <template>
   <nav class="nav-bar">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a
-          href="#hero"
-          :class="{active: activeLink === '#hero'}"
-          @click="setActiveLink('#hero')"
-          >Acceuil</a
+    <div class="nav-bar--content">
+      <!-- LOGO -->
+      <div class="nav-bar-logo--container">
+        <div>
+          <img src="" alt="logo/png" />
+        </div>
+        <div class="logo-title">
+          <p>The Gentlemen's Cut</p>
+        </div>
+      </div>
+
+      <!-- NAV LINKS -->
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a
+            href="#hero"
+            :class="{active: activeLink === '#hero'}"
+            @click="setActiveLink('#hero')"
+            >Acceuil</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="#section1"
+            :class="{active: activeLink === '#section1'}"
+            @click="setActiveLink('#section1')"
+            >About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="#section2"
+            :class="{active: activeLink === '#section2'}"
+            @click="setActiveLink('#section2')"
+            >Services</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="#section3"
+            :class="{active: activeLink === '#section3'}"
+            @click="setActiveLink('#section3')"
+            >Contact</a
+          >
+        </li>
+      </ul>
+
+      <!-- BOOKING BUTTON -->
+      <div class="nav-bar-cta--container">
+        <CtaBtn :style="{backgroundColor: 'hsl(from var(--accent) h s l / 1)'}"
+          >Book Now</CtaBtn
         >
-      </li>
-      <li class="nav-item">
-        <a
-          href="#section1"
-          :class="{active: activeLink === '#section1'}"
-          @click="setActiveLink('#section1')"
-          >About</a
-        >
-      </li>
-      <li class="nav-item">
-        <a
-          href="#section2"
-          :class="{active: activeLink === '#section2'}"
-          @click="setActiveLink('#section2')"
-          >Services</a
-        >
-      </li>
-      <li class="nav-item">
-        <a
-          href="#section3"
-          :class="{active: activeLink === '#section3'}"
-          @click="setActiveLink('#section3')"
-          >Contact</a
-        >
-      </li>
-    </ul>
+      </div>
+    </div>
   </nav>
 </template>
 
@@ -58,25 +79,45 @@ const setActiveLink = (href) => {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-content: center;
-  padding: 20px 20px;
+  align-items: center;
+  background-color: hsl(from var(--black-color) h s 3 / 1);
+  color: hsl(from var(--white-color) h s 35 / 1);
+  padding: 20px 0;
+  border-bottom: 1px solid hsl(from var(--white-color) h s 20 / 1);
+}
+
+.nav-bar--content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-list {
   list-style: none;
   gap: 20px;
-  margin: 0;
-  padding: 0;
   display: flex;
-  background-color: var(--black-color);
-  padding: 20px 40px;
-  border-radius: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar-logo--container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-title {
+  margin-left: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: hsl(from var(--white-color) h s l / 1);
 }
 
 a {
   text-decoration: none;
-  color: var(--white-color);
-  font-weight: bold;
+  color: hsl(from var(--white-color) h s 35 / 1);
+  font-weight: 400;
   cursor: pointer;
   transition: color 0.3s ease;
 }

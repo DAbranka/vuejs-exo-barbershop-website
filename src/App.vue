@@ -40,10 +40,21 @@ body,
   scroll-behavior: smooth;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(from var(--black-color) h s 3 / 1);
+}
+
+#app {
+  width: 100%;
+  max-width: 1200px;
+}
+
 :root {
   --primary-color: #010101;
   --secondary-color: #f5f5f5;
-  --accent: hsl(8, 100%, 52%);
+  --accent: hsl(8 75 52);
   --black-color: #000000;
   --white-color: #ffffff;
   --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
