@@ -82,7 +82,7 @@ const setActiveLink = (href) => {
   align-items: center;
   background-color: hsl(from var(--black-color) h s 3 / 1);
   color: hsl(from var(--white-color) h s 35 / 1);
-  padding: 20px 0;
+  padding: 12px 0;
   border-bottom: 1px solid hsl(from var(--white-color) h s 20 / 1);
 }
 

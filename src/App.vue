@@ -72,19 +72,15 @@ header {
   font-size: 2rem;
 }
 #section1 {
-  background-color: #ffdddd;
+  background-color: #252525;
   height: 100vh;
 }
 #section2 {
-  background-color: #ddffdd;
+  background-color: #0b0b0b;
   height: 100vh;
 }
 #section3 {
-  background-color: #ddddff;
-  height: 100vh;
-}
-#section4 {
-  background-color: #ffffdd;
+  background-color: #252525;
   height: 100vh;
 }
 </style>

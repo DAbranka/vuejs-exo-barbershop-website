@@ -7,14 +7,26 @@ import CtaBtn from "./CtaBtn.vue";
   <section class="headerContent">
     <!-- Textual Content -->
     <section class="hdrTitle">
-      <HeaderTitle>Where Style <br> Meets Tradition</HeaderTitle>
+      <!-- Sub Title -->
+      <div class="hdrSubTitle">
+        <p>✨ Premium Grooming Since 2015</p>
+      </div>
+
+      <!-- Header Title -->
+      <HeaderTitle
+        >Where Style <br />
+        Meets Tradition</HeaderTitle
+      >
+
+      <!-- Sub Paragraph -->
       <article>
         <p>
-          Experience the art of grooming at our barber shop, where skilled
-          barbers blend classic techniques with modern styles to give you a look
-          that’s uniquely you.
+          Experience the art of grooming at our barber shop, where skilled barbers blend
+          classic techniques with modern styles to give you a look that’s uniquely you.
         </p>
       </article>
+
+      <!-- CTA BUTTONS -->
       <section class="ctaSection">
         <ul>
           <li>
@@ -26,6 +38,22 @@ import CtaBtn from "./CtaBtn.vue";
             <CtaBtn>View Pricing</CtaBtn>
           </li>
         </ul>
+      </section>
+
+      <!-- Stats -->
+      <section>
+        <article>
+          <p>10K+</p>
+          <p>Happy Clients</p>
+        </article>
+        <article>
+          <p>15+</p>
+          <p>Expert Barbers</p>
+        </article>
+        <article>
+          <p>4.9</p>
+          <p>Average Rating</p>
+        </article>
       </section>
     </section>
 
@@ -43,13 +71,24 @@ import CtaBtn from "./CtaBtn.vue";
 </template>
 
 <style scoped>
-
 .headerContent {
   display: flex;
   width: 100%;
   height: 100vh;
   position: relative;
 }
+
+.hdrSubTitle p {
+  font-size: 1rem;
+  color: hsl(from var(--white-color) 40 100 50 / 1);
+  margin: 0 0 30px 0;
+  font-weight: 500;
+  background: #ea650026;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
 .hdrTitle {
   color: var(--white-color);
   width: 50%;
@@ -63,13 +102,33 @@ import CtaBtn from "./CtaBtn.vue";
 }
 
 .hdrTitle article {
-  margin-top: 20px;
-  font-size: 1.4rem;
-  line-height: 1.6;
-  font-family: var(--font-secondary);
+  margin: 20px 0;
+  font-size: 1.3rem;
+  line-height: 1.55;
+  font-family: var(--font-primary);
   color: hsl(from var(--white-color) h s 50 / 1);
-
 }
+
+.hdrTitle section:last-child {
+  display: flex;
+  margin-top: 30px;
+}
+
+.hdrTitle section:last-child article {
+  margin-right: 40px;
+}
+.hdrTitle section:last-child article p:first-child {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(from var(--white-color) h s 90 / 1);
+}
+
+.hdrTitle section:last-child article p:last-child {
+  font-size: 1rem;
+  font-weight: 500;
+  color: hsl(from var(--white-color) h s 70 / 1);
+}
+
 
 .ctaSection ul {
   list-style: none;
