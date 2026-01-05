@@ -3,6 +3,9 @@ import SectionComp from "./components/SectionComp.vue";
 import FooterComp from "./components/FooterComp.vue";
 import NavBar from "./components/NavBar.vue";
 import HeaderContent from "./components/HeaderContent.vue";
+import SectionOne from "./components/SectionOne.vue";
+import SectionTwo from "./components/SectionTwo.vue";
+import SectionThree from "./components/SectionThree.vue";
 </script>
 
 <template>
@@ -14,9 +17,9 @@ import HeaderContent from "./components/HeaderContent.vue";
 
   <!-- MAIN CONTENT -->
   <main>
-    <SectionComp class="sections" id="section1">SECTION 1</SectionComp>
-    <SectionComp class="sections" id="section2">SECTION 2</SectionComp>
-    <SectionComp class="sections" id="section3">SECTION 3</SectionComp>
+    <SectionOne id="section1"/>
+    <SectionTwo id="section2"/>
+    <SectionThree id="section3"/>
   </main>
 
   <!-- FOOTER -->
@@ -38,6 +41,7 @@ body,
   height: 100%;
   font-family: var(--font-primary);
   scroll-behavior: smooth;
+  color: var(--white-color);
 }
 
 body {
@@ -65,22 +69,14 @@ header {
   position: relative;
   height: 100%;
 }
-.sections {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-}
+
 #section1 {
-  background-color: #252525;
-  height: 100vh;
+  background-color: #1c1c1c;
 }
 #section2 {
   background-color: #0b0b0b;
-  height: 100vh;
 }
 #section3 {
   background-color: #252525;
-  height: 100vh;
 }
 </style>
