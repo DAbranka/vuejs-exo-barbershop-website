@@ -11,8 +11,7 @@
 
   section {
     text-align: center;
-    padding: 3rem 1rem;
-    margin-bottom: 2rem;
+    padding: 3rem 0 1.25rem 0;
   }
 
   h2{

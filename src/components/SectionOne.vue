@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SectionOneCard from "./SectionOneCard.vue";
+import SectionOneCards from "./SectionOneCards.vue";
 import SectionTitleSubTitle from "./SectionTitle&SubTitle.vue";
 </script>
 
@@ -14,9 +14,7 @@ import SectionTitleSubTitle from "./SectionTitle&SubTitle.vue";
       </SectionTitleSubTitle>
     </section>
     <section>
-      <article>
-        <SectionOneCard />
-      </article>
+      <SectionOneCards />
     </section>
   </div>
 </template>

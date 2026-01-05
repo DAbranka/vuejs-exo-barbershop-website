@@ -1,5 +1,4 @@
 <script setup>
-import SectionComp from "./components/SectionComp.vue";
 import FooterComp from "./components/FooterComp.vue";
 import NavBar from "./components/NavBar.vue";
 import HeaderContent from "./components/HeaderContent.vue";

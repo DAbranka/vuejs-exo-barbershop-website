@@ -14,9 +14,7 @@ import SectionTitleSubTitle from "./SectionTitle&SubTitle.vue";
       </SectionTitleSubTitle>
     </section>
     <section>
-      <article>
-        <SectionOneCard />
-      </article>
+      
     </section>
   </div>
 </template>
