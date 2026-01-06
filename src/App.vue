@@ -6,6 +6,7 @@ import SectionOne from "./components/SectionOne.vue";
 import SectionTwo from "./components/SectionTwo.vue";
 import SectionThree from "./components/SectionThree.vue";
 import SectionFour from "./components/SectionFour.vue";
+import SectionFive from "./components/SectionFive.vue";
 </script>
 
 <template>
@@ -21,6 +22,7 @@ import SectionFour from "./components/SectionFour.vue";
     <SectionTwo id="section2" />
     <SectionThree id="section3" />
     <SectionFour id="section4" />
+    <SectionFive id="section5" />
   </main>
 
   <!-- FOOTER -->
@@ -86,7 +88,8 @@ header {
 #section1,
 #section2,
 #section3,
-#section4 {
+#section4,
+#section5 {
   padding-bottom: 2rem;
 }
 
@@ -101,5 +104,9 @@ header {
 }
 #section4 {
   background-color: var(--black-color);
+}
+
+#section5 {
+  background-color: #1c1c1c;
 }
 </style>
