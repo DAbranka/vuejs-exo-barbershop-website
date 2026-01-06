@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SectionFourImgGal from "./SectionFourImgGal.vue";
 import SectionTitleSubTitle from "./SectionTitleSubTitle.vue";
 </script>
 
@@ -7,13 +8,11 @@ import SectionTitleSubTitle from "./SectionTitleSubTitle.vue";
     <section>
       <SectionTitleSubTitle>
         <template #title>Our Athmosphere</template>
-        <template #subtitle>
-          Step into excellence
-        </template>
+        <template #subtitle> Step into excellence </template>
       </SectionTitleSubTitle>
     </section>
     <section>
-
+      <SectionFourImgGal />
     </section>
   </div>
 </template>

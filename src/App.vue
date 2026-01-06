@@ -81,6 +81,12 @@ header {
   height: 100%;
 }
 
+#section1,
+#section2,
+#section3 {
+  padding-bottom: 2rem;
+}
+
 #section1 {
   background-color: #1c1c1c;
 }

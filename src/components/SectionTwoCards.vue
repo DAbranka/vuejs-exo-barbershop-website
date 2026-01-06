@@ -12,37 +12,37 @@ import SectionTwoCard from "./SectionTwoCard.vue";
     </article>
     <article>
       <SectionTwoCard>
-        <template #title>Signature Cut</template>
-        <template #price>40$</template>
-        <template #time>45 min</template>
+        <template #title>Beard Design</template>
+        <template #price>30$</template>
+        <template #time>30 min</template>
       </SectionTwoCard>
     </article>
     <article>
       <SectionTwoCard>
-        <template #title>Signature Cut</template>
-        <template #price>40$</template>
-        <template #time>45 min</template>
+        <template #title>Classic Shave</template>
+        <template #price>35$</template>
+        <template #time>40 min</template>
       </SectionTwoCard>
     </article>
     <article>
       <SectionTwoCard>
-        <template #title>Signature Cut</template>
-        <template #price>40$</template>
-        <template #time>45 min</template>
+        <template #title>Kids Cut</template>
+        <template #price>25$</template>
+        <template #time>30 min</template>
       </SectionTwoCard>
     </article>
     <article>
       <SectionTwoCard>
-        <template #title>Signature Cut</template>
-        <template #price>40$</template>
-        <template #time>45 min</template>
+        <template #title>Deluxe Package</template>
+        <template #price>75$</template>
+        <template #time>90 min</template>
       </SectionTwoCard>
     </article>
     <article>
       <SectionTwoCard>
-        <template #title>Signature Cut</template>
-        <template #price>40$</template>
-        <template #time>45 min</template>
+        <template #title>Hair color</template>
+        <template #price>60$</template>
+        <template #time>60 min</template>
       </SectionTwoCard>
     </article>
   </div>
