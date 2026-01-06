@@ -16,9 +16,9 @@ import SectionThree from "./components/SectionThree.vue";
 
   <!-- MAIN CONTENT -->
   <main>
-    <SectionOne id="section1"/>
-    <SectionTwo id="section2"/>
-    <SectionThree id="section3"/>
+    <SectionOne id="section1" />
+    <SectionTwo id="section2" />
+    <SectionThree id="section3" />
   </main>
 
   <!-- FOOTER -->
@@ -46,7 +46,7 @@ body,
 body {
   display: flex;
   justify-content: center;
-  background-color: hsl(from var(--black-color) h s 3 / 1);
+  background-color: var(--black-color);
 }
 
 #app {
@@ -55,13 +55,25 @@ body {
 }
 
 :root {
+  /* -------------------------------------------------------------------------- */
+
+  --black: #000000;
+  --white: #ffffff;
+  --black-color: hsl(from var(--black) h s 3 / 1);
+  --white-color: #ffffff;
+
+  /* -------------------------------------------------------------------------- */
+
   --primary-color: #010101;
   --secondary-color: #f5f5f5;
   --accent: hsl(8 75 52);
-  --black-color: #000000;
-  --white-color: #ffffff;
-  --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-secondary: 'Georgia', serif;
+
+  /* -------------------------------------------------------------------------- */
+
+  --font-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-secondary: "Georgia", serif;
+
+  /* -------------------------------------------------------------------------- */
 }
 
 header {
@@ -73,7 +85,7 @@ header {
   background-color: #1c1c1c;
 }
 #section2 {
-  background-color: #0b0b0b;
+  background-color: var(--black-color);
 }
 #section3 {
   background-color: #252525;

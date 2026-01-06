@@ -1,5 +1,6 @@
-<script setup lang="ts">
+<script setup>
 import SectionTitleSubTitle from "./SectionTitleSubTitle.vue";
+import SectionTwoCards from "./SectionTwoCards.vue";
 </script>
 
 <template>
@@ -10,8 +11,9 @@ import SectionTitleSubTitle from "./SectionTitleSubTitle.vue";
         <template #subtitle> Tailored grooming for every gentleman </template>
       </SectionTitleSubTitle>
     </section>
-    <section>
 
+    <section>
+      <SectionTwoCards />
     </section>
   </div>
 </template>
