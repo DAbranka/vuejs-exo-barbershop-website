@@ -27,14 +27,6 @@ const setActiveLink = (href) => {
       <ul class="nav-list">
         <li class="nav-item">
           <a
-            href="#hero"
-            :class="{active: activeLink === '#hero'}"
-            @click="setActiveLink('#hero')"
-            >Acceuil</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
             href="#section1"
             :class="{active: activeLink === '#section1'}"
             @click="setActiveLink('#section1')"
@@ -51,9 +43,17 @@ const setActiveLink = (href) => {
         </li>
         <li class="nav-item">
           <a
-            href="#section3"
-            :class="{active: activeLink === '#section3'}"
-            @click="setActiveLink('#section3')"
+            href="#section4"
+            :class="{active: activeLink === '#section4'}"
+            @click="setActiveLink('#section4')"
+            >Reviews</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="#section5"
+            :class="{active: activeLink === '#section5'}"
+            @click="setActiveLink('#section5')"
             >Contact</a
           >
         </li>
