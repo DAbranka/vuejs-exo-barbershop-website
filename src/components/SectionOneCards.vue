@@ -28,9 +28,7 @@ import SectionOneCard from "./SectionOneCard.vue";
         <SectionOneCard>
           <template></template>
           <template #title>Quick Service</template>
-          <template #description
-            >Premium service without the wait</template
-          >
+          <template #description>Premium service without the wait</template>
         </SectionOneCard>
       </article>
     </li>
@@ -39,9 +37,7 @@ import SectionOneCard from "./SectionOneCard.vue";
         <SectionOneCard>
           <template></template>
           <template #title>Classic Techniques</template>
-          <template #description
-            >Traditional methods meet modern style</template
-          >
+          <template #description>Traditional methods meet modern style</template>
         </SectionOneCard>
       </article>
     </li>

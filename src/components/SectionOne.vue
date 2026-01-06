@@ -1,6 +1,6 @@
-<script setup lang="ts">
+<script setup>
 import SectionOneCards from "./SectionOneCards.vue";
-import SectionTitleSubTitle from "./SectionTitle&SubTitle.vue";
+import SectionTitleSubTitle from "./SectionTitleSubTitle.vue";
 </script>
 
 <template>
