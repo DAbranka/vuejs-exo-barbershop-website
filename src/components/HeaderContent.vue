@@ -1,6 +1,32 @@
 <script setup lang="ts">
 import HeaderTitle from "./HeaderTitle.vue";
 import CtaBtn from "./CtaBtn.vue";
+import {ref} from "vue";
+
+const activeLink = ref("#hero");
+
+const setActiveLink = (href) => {
+  activeLink.value = href;
+
+  // Récupérer l'élément cible
+  const targetId = href.replace("#", "");
+  const targetElement = document.getElementById(targetId);
+
+  if (targetElement) {
+    // Hauteur de la navbar (en pixels)
+    const navBarHeight = 64; // Ajustez selon votre hauteur réelle
+
+    // Calculer la position avec l'offset
+    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - navBarHeight;
+
+    // Scroller vers la position avec offset
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+};
 </script>
 
 <template>
@@ -35,7 +61,14 @@ import CtaBtn from "./CtaBtn.vue";
             >
           </li>
           <li>
-            <CtaBtn>View Pricing</CtaBtn>
+            <CtaBtn>
+              <a
+                :style="{textDecoration: 'none', color: 'inherit'}"
+                href="#section2"
+                @click.prevent="setActiveLink('#section2')"
+                >View Pricing</a
+              >
+            </CtaBtn>
           </li>
         </ul>
       </section>
@@ -128,7 +161,6 @@ import CtaBtn from "./CtaBtn.vue";
   font-weight: 500;
   color: hsl(from var(--white-color) h s 70 / 1);
 }
-
 
 .ctaSection ul {
   list-style: none;

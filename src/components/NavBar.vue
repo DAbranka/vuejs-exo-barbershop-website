@@ -6,7 +6,27 @@ const activeLink = ref("#hero");
 
 const setActiveLink = (href) => {
   activeLink.value = href;
+
+  // Récupérer l'élément cible
+  const targetId = href.replace('#', '');
+  const targetElement = document.getElementById(targetId);
+
+  if (targetElement) {
+    // Hauteur de la navbar (en pixels)
+    const navBarHeight = 64; // Ajustez selon votre hauteur réelle
+
+    // Calculer la position avec l'offset
+    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - navBarHeight;
+
+    // Scroller vers la position avec offset
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
 };
+
 </script>
 
 /* -------------------------------- TEMPLATE -------------------------------- */
@@ -19,7 +39,7 @@ const setActiveLink = (href) => {
           <img src="" alt="logo/png" />
         </div> -->
         <div class="logo-title">
-          <p>The Gentlemen's Cut</p>
+          <a href="#hero">The Gentlemen's Cut</a>
         </div>
       </div>
 
@@ -29,7 +49,7 @@ const setActiveLink = (href) => {
           <a
             href="#section1"
             :class="{active: activeLink === '#section1'}"
-            @click="setActiveLink('#section1')"
+            @click.prevent="setActiveLink('#section1')"
             >About</a
           >
         </li>
@@ -37,7 +57,7 @@ const setActiveLink = (href) => {
           <a
             href="#section2"
             :class="{active: activeLink === '#section2'}"
-            @click="setActiveLink('#section2')"
+            @click.prevent="setActiveLink('#section2')"
             >Services</a
           >
         </li>
@@ -45,7 +65,7 @@ const setActiveLink = (href) => {
           <a
             href="#section4"
             :class="{active: activeLink === '#section4'}"
-            @click="setActiveLink('#section4')"
+            @click.prevent="setActiveLink('#section4')"
             >Reviews</a
           >
         </li>
@@ -53,7 +73,7 @@ const setActiveLink = (href) => {
           <a
             href="#section5"
             :class="{active: activeLink === '#section5'}"
-            @click="setActiveLink('#section5')"
+            @click.prevent="setActiveLink('#section5')"
             >Contact</a
           >
         </li>
@@ -107,7 +127,7 @@ const setActiveLink = (href) => {
   align-items: center;
 }
 
-.logo-title {
+.logo-title a{
   margin-left: 10px;
   font-size: 1.5rem;
   font-weight: bold;

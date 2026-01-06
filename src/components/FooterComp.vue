@@ -3,8 +3,8 @@
     <section>
       <article>
         <div>
-          <div><img src="" alt="icon/png" /></div>
-          <p>The Gentlemans's Cut</p>
+          <!-- <div><img src="" alt="icon/png" /></div> -->
+          <a href="#hero">The Gentlemen's Cut</a>
         </div>
         <div>
           <p>Premium grooming for the modern gentleman</p>
@@ -30,18 +30,28 @@
       </article>
     </section>
     <section>
-      <p>© 2026 CryptidCrowd. All rights reserved.</p>
+      <p>
+        © 2026
+        <a
+          :style="{
+            textDecoration: 'none',
+          }"
+          href="https://cryptidcrowd.studio/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >CryptidCrowd</a
+        >. All rights reserved.
+      </p>
     </section>
   </div>
 </template>
 
 <style scoped>
-
 section:first-child {
   display: flex;
   padding: 2.5rem 0 1.5rem 0;
   gap: 2rem;
-  border-top: 1px solid hsl(from var(--white-color) h s 45 / .5);
+  border-top: 1px solid hsl(from var(--white-color) h s 45 / 0.5);
   border-bottom: 1px solid hsl(from var(--white-color) h s 45 / 0.2);
 }
 
@@ -56,9 +66,26 @@ section:last-child {
   font-size: 0.9rem;
   color: hsl(from var(--white-color) h s 60 / 1);
 }
+section:last-child a {
+  color: var(--white-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
-article:first-child div:first-child p {
-  font-weight:600;
+section:last-child a:hover {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+article:first-child div:first-child a {
+  font-weight: 600;
+  text-decoration: none;
+  color: hsl(var(--white-color) / 1);
+}
+
+article:first-child div:first-child a:hover {
+  color: var(--accent);
+  transition: color 0.3s ease;
 }
 
 article:first-child div:first-child {
@@ -80,7 +107,7 @@ article:nth-child(3) p {
 
 article:nth-child(2) ul,
 article:nth-child(3) ul {
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: hsl(from var(--white-color) h s 70 / 1);
   line-height: 1.3;
 }
