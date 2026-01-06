@@ -61,11 +61,8 @@ const setActiveLink = (href) => {
             >
           </li>
           <li>
-            <CtaBtn>
-              <a
-                :style="{textDecoration: 'none', color: 'inherit'}"
-                href="#section2"
-                @click.prevent="setActiveLink('#section2')"
+            <CtaBtn @click.prevent="setActiveLink('#section2')">
+              <a :style="{textDecoration: 'none', color: 'inherit'}" href="#section2"
                 >View Pricing</a
               >
             </CtaBtn>
