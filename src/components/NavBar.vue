@@ -1,8 +1,10 @@
 <script setup>
-import {ref} from "vue";
+import {ref, onMounted, onUnmounted} from "vue";
 import CtaBtn from "./CtaBtn.vue";
 
 const activeLink = ref("#hero");
+const navBarHeight = 64;
+const sections = ['hero', 'section1', 'section2', 'section3', 'section4', 'section5'];
 
 const setActiveLink = (href) => {
   activeLink.value = href;
@@ -12,9 +14,6 @@ const setActiveLink = (href) => {
   const targetElement = document.getElementById(targetId);
 
   if (targetElement) {
-    // Hauteur de la navbar (en pixels)
-    const navBarHeight = 64; // Ajustez selon votre hauteur réelle
-
     // Calculer la position avec l'offset
     const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
     const offsetPosition = elementPosition - navBarHeight;
@@ -26,6 +25,36 @@ const setActiveLink = (href) => {
     });
   }
 };
+
+// Fonction pour détecter quelle section est dans la viewport
+const updateActiveSection = () => {
+  let currentSection = '#hero';
+
+  for (const sectionId of sections) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const rect = element.getBoundingClientRect();
+      // Si le top de la section est dans les 200px du haut (offset pour la navbar)
+      if (rect.top <= 200 && rect.bottom >= 0) {
+        currentSection = `#${sectionId}`;
+        break;
+      }
+    }
+  }
+
+  activeLink.value = currentSection;
+};
+
+// Ajouter l'écouteur de scroll au montage du composant
+onMounted(() => {
+  window.addEventListener('scroll', updateActiveSection);
+  updateActiveSection(); // Initialiser au montage
+});
+
+// Nettoyer l'écouteur au démontage
+onUnmounted(() => {
+  window.removeEventListener('scroll', updateActiveSection);
+});
 
 </script>
 
