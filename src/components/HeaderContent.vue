@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import HeaderTitle from "./HeaderTitle.vue";
 import CtaBtn from "./CtaBtn.vue";
-import {ref} from "vue";
+import {ref, onMounted} from "vue";
+import {gsap} from "gsap";
 
 const activeLink = ref("#hero");
+const headerTitle = ref('Where Style Meets Tradition');
 
 const setActiveLink = (href) => {
   activeLink.value = href;
@@ -27,6 +29,35 @@ const setActiveLink = (href) => {
     });
   }
 };
+
+onMounted(() => {
+  const tl = gsap.timeline();
+  tl.from(".hdrTitle", {
+    y: -50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  }).from(
+    ".hdrTitle article, .hdrSubTitle, .ctaSection, .hdrTitle section:last-child article",
+    {
+      y: 20,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      stagger: 0.2,
+    },
+    "-=0.5"
+  ).from(
+    ".headerImg__img--wrapper",
+    {
+      // scale: 1.2,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+    },
+    "-=1"
+  );
+})
 </script>
 
 <template>
@@ -39,9 +70,8 @@ const setActiveLink = (href) => {
       </div>
 
       <!-- Header Title -->
-      <HeaderTitle
-        >Where Style <br />
-        Meets Tradition</HeaderTitle
+      <HeaderTitle class="headerTitle"
+        >{{ headerTitle }}</HeaderTitle
       >
 
       <!-- Sub Paragraph -->
