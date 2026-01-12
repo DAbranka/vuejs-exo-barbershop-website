@@ -93,6 +93,10 @@ header {
   padding-bottom: 2rem;
 }
 
+#section1, #section3, #section5 {
+  border-radius: 14px;
+}
+
 #section1 {
   background-color: #1c1c1c;
 }
